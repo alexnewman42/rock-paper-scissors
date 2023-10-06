@@ -19,28 +19,20 @@ function getComputerChoice() {
     }
 }
 
-function playRound(playerSelection, computerSelection) {
-    if (playerSelection !== "rock" || playerSelection !== "paper" || playerSelection !== "scissors") {
-        return "Not valid input";
-    }
-    
-    if (computerSelection !== "rock" || computerSelection !== "paper" || computerSelection !== "scissors") {
-        return "Computer not entering valid input";
-    }
-    
-    if (playerSelection === computerSelection) {
+function playRound(playerSelection, computerSelection) {    
+    if (playerSelection == computerSelection) {
         return "It's a tie!";
-    } else if (playerSelection === "rock" && computerSelection === "paper") {
+    } else if (playerSelection == "rock" && computerSelection == "paper") {
         return "You lose! Paper beats rock!";
-    } else if (playerSelection === "rock" && computerSelection === "scissors") {
+    } else if (playerSelection == "rock" && computerSelection == "scissors") {
         return "You win! Rock beats scissors!";
-    } else if (playerSelection === "paper" && computerSelection === "rock") {
+    } else if (playerSelection == "paper" && computerSelection == "rock") {
         return "You win! Paper beats rock!";
-    } else if (playerSelection === "paper" && computerSelection === "scissors") {
+    } else if (playerSelection == "paper" && computerSelection == "scissors") {
         return "You lose! Scissors beats paper!";
-    } else if (playerSelection === "scissors" && computerSelection === "rock") {
+    } else if (playerSelection == "scissors" && computerSelection == "rock") {
         return "You lose! Rock beats scissors!";
-    } else if (playerSelection === "scissors" && computerSelection === "paper") {
+    } else if (playerSelection == "scissors" && computerSelection == "paper") {
         return "You win! Scissors beats rock!";
     } else {
         return "Something Went Wrong";
