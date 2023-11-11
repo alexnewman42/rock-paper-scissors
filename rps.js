@@ -42,6 +42,10 @@ function playRound(playerSelection, computerSelection) {
 const btnRock = document.querySelector('#rock');
 const btnPaper = document.querySelector('#paper');
 const btnScissors = document.querySelector('#scissors');
+const score = document.querySelector('#score');
+const winner = document.querySelector('#winner');
+let playerScore = 0;
+let computerScore = 0; 
 
 btnRock.addEventListener('click', () => {
     console.log(playRound('rock', getComputerChoice()));
