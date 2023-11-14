@@ -39,22 +39,18 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-const btnRock = document.querySelector('#rock');
-const btnPaper = document.querySelector('#paper');
-const btnScissors = document.querySelector('#scissors');
 const score = document.querySelector('#score');
 const winner = document.querySelector('#winner');
 let playerScore = 0;
 let computerScore = 0; 
 
-btnRock.addEventListener('click', () => {
-    console.log(playRound('rock', getComputerChoice()));
-});
+// Event delegation to catch the button click
 
-btnPaper.addEventListener('click', () => {
-    console.log(playRound('paper', getComputerChoice()));
-});
+let buttons = document.querySelector('#buttons');
 
-btnScissors.addEventListener('click', () => {
-    console.log(playRound('scissors', getComputerChoice()));
+buttons.addEventListener('click', (event) => {
+    let target = event.target;
+
+    console.log(playRound(target.id, getComputerChoice()));
+
 });
