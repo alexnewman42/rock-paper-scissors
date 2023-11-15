@@ -61,4 +61,12 @@ buttons.addEventListener('click', (event) => {
 
     status.textContent = playRound(target.id, getComputerChoice());
     score.textContent = "Player: " + playerScore + "   Computer: " + computerScore;
+    
+    if (playerScore == 5) {
+        winner.textContent = "The human wins!";
+    } else if (computerScore == 5) {
+        winner.textContent = "The computer wins!"
+    }
 });
+
+
